@@ -1,0 +1,108 @@
+.about {
+  .my-text-gradient {
+    @extend %text-gradient;
+    font-weight: 700;
+  }
+
+  .section1 {
+    margin-top: 145px;
+
+    @media(min-width: 767px){
+      margin-top: 183px;
+      max-width: 80vw;
+    }
+
+    @media(min-width: 1439px){
+      display: flex;
+      margin-bottom: 100px;
+      justify-content: center;
+
+      .introduction {
+        max-width: 40%;
+        margin-right: 40px;
+      }
+
+      .advantages {
+        max-width: 40%; 
+        border-top: none;
+        border-left:4px solid $color-gray-separator;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .text-box span,
+  .introduction span {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+  }
+
+  .advantages {
+    border-top:4px solid $color-gray-separator;
+
+    .text-box p {
+      color: $color-main;
+    }
+  }
+
+  .team {
+    background: linear-gradient(264.71deg, #F01432 0%, #323264 29.69%),
+    url("../img/about/team.png");
+    background-blend-mode: screen, normal;
+    background-size: cover;
+    background-position: center;
+    
+    .text-box {
+      display: block;
+      padding: 124px 0px;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: 20px;
+      text-transform: uppercase;
+      color: $color-white;
+      opacity: 0.8;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+      font-weight: 700;
+
+      @media(min-width: 768px){
+        font-size: 60px;
+        letter-spacing: 43px;
+        margin: 0 auto;
+      }
+      @media(min-width: 1024px){
+        font-size: 96px;
+        line-height: 113px;
+        letter-spacing: 60px;
+      }
+    }
+  }
+
+  .section2 {
+    @media(min-width: 767px){
+      max-width: 80vw;
+    }
+
+    .text-box {
+      margin: 20px 0;
+
+      @media(min-width: 1439px){
+        display: flex;
+        margin: 80px 0;
+        // justify-content: center;
+        // align-items: start;
+
+        .text-wrapper {
+          color: $color-body-text;
+          max-width: 40%;
+          margin-right: 40px;
+        }
+        
+        .my-text-gradient {
+          max-width: 40%; 
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

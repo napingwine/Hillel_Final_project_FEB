@@ -1,0 +1,33 @@
+label.button,
+a.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 50px;width: 250px;
+  transform: translateX(-50%);
+  background: $color-active-regular;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  
+  &:hover {
+    background: $color-active-hover;
+    color: $color-white;
+  }
+  
+  &:active {
+    background: $color-active-active;
+    color: $color-white;
+  }
+
+  
+  &:hover{
+    color: $color-white;
+  }
+  
+}

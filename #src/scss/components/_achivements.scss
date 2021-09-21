@@ -1,0 +1,74 @@
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px;
+}
+
+
+.achievements {
+  background: $color-gray-bg;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 12px 12px 0px 0px;
+  overflow: hidden;
+  
+  h3 {
+    @extend %h3-caps;
+    margin: 0;
+  }
+
+  .pictures {
+    display: flex;
+    justify-content: space-around;
+
+    .achivements-box3{
+      display: none;
+      @media(min-width: 767px){
+        display: flex;
+      }
+    }
+
+    .achivements-box4 {
+      display: none;
+      @media(min-width: 1023px){
+        display: flex;
+      }
+    }
+
+    @media(min-width: 767px){
+      padding: 0 4%;
+    }
+
+    @media(max-width:1439px){
+      justify-content: space-between;
+      padding: 0 4%;
+    }
+  }
+
+  .swiper-slide {
+    width: 157px;
+
+
+
+    @media(min-width: 1024px){
+      width: 300px;
+    }
+  }
+
+  div[class^="achivements-box"]{
+    background: $color-white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 15px;
+    height: 57px;
+
+    @media(min-width: 768px){
+      height: 109px;
+    } 
+
+    img {
+      display: block;
+      object-fit: contain;
+    } 
+  }
+}

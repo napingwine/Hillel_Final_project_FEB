@@ -1,0 +1,116 @@
+.publications-bg {
+  background: $color-gray-bg ; 
+}
+
+.publications {
+  padding: 10px 20px 100px 20px;
+  position: relative;
+  max-height: 910px;
+  overflow: hidden;
+  flex-direction: column;
+  @media(min-width:768px) {
+    padding:32px 15px 100px 15px;
+  }
+
+  a:hover {
+    h4{
+      color: $color-accent;
+    }
+  }
+  
+  .header{
+    @extend %text-gradient;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+    font-size: 32px;
+    @media(min-width:768px) {
+      font-size: 42px;
+      margin-bottom: 35px;
+    }
+  }
+  
+  .articles-wrapper {
+    @media(min-width:1024px) {
+      columns: 3;
+      max-height: 960px;
+    }
+  }
+
+  .article:nth-child(-n+3){
+    display: block;
+  }
+
+  .article:nth-child(-n+4){
+      @media(min-width:768px){
+      display: block;
+    }
+  }
+  .article:nth-child(-n+6){
+      @media(min-width:1024px){
+      display: block;
+    }
+  }
+
+  .article {
+    display: none;
+    border-radius: 8px;
+    background: $color-white;
+    break-inside: avoid;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    
+    .textbox {
+      padding: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: $color-active-regular;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    time {
+      color: $color-gray-text;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .article-content {
+    display: none;
+    font-size: 16px;
+    @media(min-width:768px) {
+      display: block;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 4px solid $color-gray-separator;
+      display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow-y: hidden;
+    }
+  }
+
+  .button {
+    bottom: 40px;
+    @media(min-width:768px) {
+      bottom: 80px;
+    }
+  }
+
+  .button-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 23%;
+    background:$liner-gradient-button-swadow;
+    bottom: 0;
+    left: 0;
+  }
+}

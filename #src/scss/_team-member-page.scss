@@ -1,0 +1,111 @@
+.team-member {
+  padding: 0px 20px;
+  padding-top: 125px;
+  font-size: 18px;
+  line-height: 1.45;
+  @media(min-width: 768px){
+    padding-top: 197px;
+    .separator{
+      position: relative;
+    }
+
+    .separator::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      top: calc(50% - 3px);
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-gray-separator;
+      border-radius: 50%;
+    }
+  }
+
+  @media(min-width: 1024px){
+    display: flex;
+    justify-content: center;
+  }
+
+  .team-member-photo-wrapper {
+    height: 405px;
+    width: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    display: inline-block;
+    @media(min-width: 768px){
+      height: 500px;
+    }
+  
+    img{
+      display: block;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    @extend %text-gradient;
+    font-weight: 700;
+    margin: 9px 0 10px 0;
+    @media(min-width: 768px){
+      margin: 16px 0 2px 0;
+      font-size: 42px;
+    }
+  }
+  
+  .info-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 13px;
+    
+    a {
+      font-size: 16px;
+      margin: 3px 0;
+      @media(min-width: 768px){
+        padding-left: 26px;
+      }
+    }
+    @media(min-width: 768px){
+      flex-direction: row;
+      align-items: baseline;
+      padding-bottom: 11px;
+    }
+  }
+  
+  .position {
+    font-size: 16px;
+    color: $color-gray-text;
+    margin-bottom: 5px;
+  }
+
+  .tex-box {
+    @media(min-width: 1024px){
+      padding-left: 41px;
+      width: 52%;
+      p{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  .bio-box {
+    border-top: 4px solid $color-gray-separator ;
+    padding: 20px 0;
+    @media(min-width: 1024px){
+      padding-top: 39px;
+    }
+
+    h3 { 
+      font-size: 14px;
+      color: $color-main;
+      margin: 0;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      @media(min-width: 768px){
+        margin-top: 38px;
+      }
+    }
+  }
+}
+  

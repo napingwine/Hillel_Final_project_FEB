@@ -1,0 +1,96 @@
+body {
+  font-family: "TTNorms", sans-serif;
+  font-size: 18px;
+  line-height: 1.44;
+  color: $color-body-text;
+  @media(min-width:767px){
+  }
+}
+
+a {
+  color: $color-active-regular;
+  text-decoration: none;
+}
+
+i {
+  color: $color-active-regular;
+  &:hover {
+    color:$color-accent;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.body-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.container {
+  max-width:1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.homepage {
+  a {
+    text-decoration: none;
+    &:hover {
+      color:$color-accent;
+    }
+  }
+}
+
+a.services-href {
+  font-size: 22px;
+  color: $color-white;
+  opacity: 0.5;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+
+  .arrow {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: solid $color-white;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg)
+  }
+
+  &:hover {
+    opacity: 1;
+    color: $color-white;
+  }
+  @media (min-width:768px) and (max-width:1440px) {
+    padding: 0 20px;      
+  }
+}
+
+.swiper-container {
+  margin-bottom: 20px;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  background: $color-active-regular;
+  z-index: 100;
+  margin: 0 8px;
+  margin-bottom: 40px;
+}

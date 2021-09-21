@@ -1,0 +1,128 @@
+.footer {
+  background: $color-gray-bg;
+  
+  a:hover {
+    color: $color-accent;
+  }
+  
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media(min-width:1023px){
+      align-items: flex-start;
+    }
+
+    .contact-footer {
+      display: flex;
+      flex-direction: column;
+      margin-left: -25px;
+      
+      .address {
+        position: relative;
+        color: $color-main;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .maps {
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .sep-phone-number a {
+        color: $color-main;
+      }
+
+      @media(min-width: 767px){
+        flex-direction: row;
+        div {
+          padding-right: 25px;
+        }
+        align-items: baseline;
+      }
+    }
+
+    .contact {
+      .facebook-link i {
+        font-size: 38px;
+      }
+      @media(min-width: 767px){
+        display: flex;
+        align-items: center;
+        div {
+          padding-right: 15px;
+        }
+        .facebook-link,
+        .sep-phone-number {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 16px;
+    color: $color-gray-text;
+    max-width: 80vw;
+    margin: 0 auto;
+
+    p {
+      margin: 20px 0 0 0 ;
+    }
+
+    @media(min-width: 1023px){
+    margin: 0;
+    }
+  }
+
+  @media(min-width: 767px){
+    .address:after,
+    .facebook-link:after,
+    .sep-phone-number:after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: calc(50% - 3px);
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $color-gray-separator;
+      border-radius: 50%;
+    }
+    
+    .address:after{
+      top: calc(50% - 10px);
+      right: 10px;
+    }
+  }
+}
+
+.footer-container {
+  padding-bottom: 110px;
+  padding-top: 20px;
+  border-top: 3px $color-gray-separator solid;
+  @media(min-width: 767px){
+    padding-top: 30px;
+  }
+  margin: 0 auto;
+  width: 90vw;
+  @media(min-width:1440px){
+    width: 1300px;
+  }
+
+  @media(min-width:1023px){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-container.no-separator-footer {
+  border-top: none;
+}
+
+.radius-footer {
+  border-radius: 12px 12px 0 0;
+}
