@@ -75,9 +75,10 @@ function css() {
       overrideBrowserslist: ["last 5 versions"],
       cascade: true
     })
-  )
-  .pipe(sourcemaps.write('.'))
-  .pipe(dest(path.build.css))
+    )
+    .pipe(group_media())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(path.build.css))
   .pipe(browsersync.stream())
 }
 
@@ -141,7 +142,7 @@ function clean(param) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, html, images, css, fonts, fontsAwasome));
+let build = gulp.series(clean, gulp.parallel(js, html, images, css, fonts, fontsAwasome), cleanCss);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
